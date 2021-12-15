@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8">
+
+		<!---------
+			FINAL PROJECT DTC 477 FALL 2021
+			NAME: Liv Torczon
+			JS on this page: Progress bar, header shrink, and drop-shadow on nav.
+		----------->
+		<title>Dress For Success — Liv Torczon</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- favicon -->
+		<link rel="icon" type="image/png" href="images/rocket-favicon.png" sizes="16x16">
+		<!-- fonts -->
+		<link rel="stylesheet" href="https://use.typekit.net/mub6ptb.css">
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/main.css">
+
+		<!-- My Javascript File -->
+		<!-- If JS is used on this page, there will be a comment with the source and link -->
+		<script src="js/myScript.js"></script>
+		
+	</head>
+
+	<!--
+		JAVASCRIPT BELOW
+
+		ONLOAD ALERT MESSAGE APPEARS
+
+		DESCRIPTION: Each time a user visits this page, an alert message appears letting the user (Stamper) know what javascript has been added.
+
+		SOURCE: https://www.w3schools.com/js/tryit.asp?filename=tryjs_events_body_onload
+	-->
+	<body onload="dfsaAlert()">
+
+		<!-- 
+			JAVASCRIPT BELOW
+			SCROLL INDICATOR
+
+			DESCRIPTION: This is a sticky scrollbar placed beneath my sticky nav; the scroll bar lets the user know how far down a page they've gone 
+
+			SOURCE: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_indicator 
+		-->
+		<div class="scroll-indicator">
+		  <div class="progress-container">
+		    <div class="progress-bar" id="myBar"></div>
+		  </div>
+		</div>
+
+		<!-- 
+			JAVASCRIPT BELOW
+			SHRINK HEADER SCROLL && BOXSHADOW ON NAV
+
+			DESCRIPTION: There is a boxshadow that appears on the navigation when the user scrolls. Additionally, the "logo" (my name) shrinks when the user scrolls down. Each function is turned on after the user has scrolled down 50px.
+
+			SHRINK SOURCE: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_shrink_header_scroll
+
+			BOXSHADOW SOURCE: https://www.w3schools.com/jsref/prop_style_boxshadow.asp
+		-->
+		<header id="header">
+			<div class="navigation-grid" id="navShadow">
+
+				<div class="nav-title-wrapper">
+					<a class="site-icon" href="index.html"><img src="images/rocket-favicon.png" alt="website logo"></a>
+
+					<!-- this shrinks on scroll -->
+					<a class="site-title" href="index.html" id="myName">Victoria Liv Torczon</a>
+
+				</div>
+
+				<div class="nav-links-wrapper">
+
+					<a class="nav-links" href="index.html">Work</a>
+
+					<a class="nav-links" href="about.html">About</a>
+
+					<a class="nav-links" href="contact.html">Contact</a>
+				</div>
+			</div>
+		</header>
+
+		<main class="main-margin-top">
+
+			<h1 class="study-title">Dress for Success</h1>
+
+			<img src="images/dfsa/dfsa-header-img.png" alt="dress for success website redesign photo">
+
+			<div class="content2column width1000">
+
+				<div class="tp-pddng-xl">
+					<h4>Background</h4>
+					<p><a href="">Dress For Success</a> is a global non-profit with a mission to empower women to achieve economic independence by providing a network of support, professional attire, and the development tools needed to help women thrive in work and in life.</p>
+				</div>
+
+				<div class="tp-pddng-xl">
+					<h4>The Challenge</h4>
+					<p>The current website had usability, organization, and functionality issues, causing friction for clients, volunteers, donors, and staff. The challenge and goal for this project was to redesign the website from the ground up in 12 weeks.</p>
+				</div>
+
+			</div>
+			
+
+			<div class="pddng-sml">
+				<img src="images/dfsa/redesignpages.png" alt="wireframes">
+			</div>
+
+			<div class="process bg-lght-gry">
+				<h2>Process</h2>
+			</div>
+
+			<!-- Project Kickoff -->
+
+			<div class="basic-container">
+
+				<h3>Project Kickoff</h3>
+
+				<p>On day 1, my team and I met with our stakeholders to understand the business priorities compared to the user priorities. <strong>I began with an analysis of the site and explored what interactions existed and where there was room for further exploration.</strong> The first thing to catch my eye was the navigation. There were several links with confounding nav-titles, and buttons placed right next to each other with the same visual design.</p>
+			</div>
+
+			<div class="img80width">
+				
+				<img src="images/dfsa/nav_analysis.png" alt="Navigation analysis">
+
+			</div>
+
+			<div class="basic-paragraph">
+
+				<p>We continued to go through each page, taking notes along the way, and narrowed in on four areas that needed the most improvement:</p>
+			</div>
+
+			<!-- The plan -->
+
+			<div class="two-two-grid">
+				<h4 class="f-blu" style="text-align: center;">Stakeholder Asks:</h4>
+				
+				<div class="sptlght-box-400">
+					<h4>1.</h4>
+
+					<p>Navigation needs an overhaul.</p>
+				</div>
+				<div class="sptlght-box-400">
+					<h4>2.</h4>
+
+					<p>The current design does not facilitate easy browsing due to the sheer amount of content.</p>
+				</div>
+				<div class="sptlght-box-400">
+					<h4>3.</h4>
+
+					<p>Available client services were not clear or consistent across chapter websites.</p>
+				</div>
+				<div class="sptlght-box-400">
+					<h4>4.</h4>
+
+					<p>No quick paths to become a client, become a volunteer, or make a donation.</p>
+				</div>
+
+			</div>
+					
+
+			<div class="basic-container">
+
+				<h3>Building A Plan</h3>
+
+				<p>Next, we began detailing our project plan and scope. As new contract designers, I realized our team hadn’t yet discussed that we were working solely off of assumptions. To form a deeper understanding of our users and their varied needs and frustrations, <strong>I proposed we begin with facilitating exploratory interviews.</strong></p>
+
+				<p>After much discussion, and a promise to be swift with my interviews, my stakeholders and the team agreed with me. As a result of my user-advocacy in our first meetings, <strong>I took on lead researcher for the duration of the project.</strong></p>
+			</div>
+
+			<div class="img80width" style="padding-bottom: 3rem;">
+
+				<img src="images/dfsa/project-plan.jpeg" alt="project plan">
+
+			</div>
+
+			<h2 class="section-title">Research</h2>
+
+			<div class="img-below-container">
+				<h3>01. User Interviews</h3>
+
+				<p>In my interviews, I set out to learn more about our four user groups and identify their pain points. I created a research protocol, which defined the product goal, described our target audience, and outlined the research goals. In total, I facilitated 8 interviews with a mix of potential clients, current volunteers, and staff members.</p>
+			</div>
+
+			<div class="content2column width1000">
+
+				<div>
+
+					<h5 class="f-blu"><strong>🕵️‍♀️ Research Goals:</strong></h5>
+
+					<div class="num-list"> 
+						<ol>
+							<li>How have users discovered Dress for Success?</li>
+							<li>What does the end-to-end experience look like for each user group?</li>
+							<li>Motivations and challenges related to DFS.</li>
+							<li>Relationship with use of technological devices.</li>
+						</ol>
+					</div>
+
+					<h5  class="f-blu" style="padding-top: 4rem;"><strong>🗒 Audience:</strong></h5>
+					<div class="num-list"> 
+						<ol>
+							<li>Total of 8 interviewees</li>
+							<li>New, current, and potential users.</li>
+							<li>Donors, Staff, Volunteers, and potential clients.</li>
+							<li>Each based out of Austin, Texas.</li>
+							
+						</ol>
+					</div>
+				</div>
+
+				<div class="content-rght">
+					<img src="images/dfsa/interview-qs.png" alt="selected interview answers">
+				</div>
+
+			</div>
+
+			<div class="sptlght-box-700">
+				<h4>Key Findings:</h4>
+
+				<p>We found that all of our participants had first discovered Dress for Success by word of mouth and that the majority were <strong>not particularly technologically-savvy.</strong><br>Clients were quick to abandon our site because of the content overload. Most users <strong>resorted to calling</strong> rather than digging through the website to find out more information.</p>
+			</div>
+
+			
+
+			<div class="basic-container">
+
+				<h3 style="padding-top: 2rem;">02. Usability Testing</h3>
+
+				<p>Next, to set a foundation for our redesign, we began conducting usability tests on the current design to understand what was working and what was not. Additionally, we hoped to discover what the user is experiencing versus what they expected.</p>
+
+				<p>Participants walked me through their expectations, thought processes, frustrations, and delights. The qualitative feedback matched with the quantitative data allowed for further examination of the participant’s needs and how to best meet them through design.</p>
+			</div>
+
+			<div class="img70width" id="dfsa-task-table">
+				<img src="images/dfsa/task-success.jpg" alt="usability test results">
+			</div>
+
+			<div class="basic-paragraph">
+
+				<p>Testing revealed a major source of frustration was, as predicted, in the navigation. Our users frequently cited pain-points of not knowing where to click when trying to complete tasks. Additionally, participants often clicked in the wrong areas to navigate through the prescribed tasks and had difficulty understanding the labels and organizational structure of the page.</p>
+			</div>
+
+			<div class="img-below-container">
+
+				<h3>03. Card Sort</h3>
+
+				<p>To further test the information architecture (IA), I conducted 6 open card sorts using OptimalWorkshop. Including the card-sort helped me answer three important questions:</p>
+
+			</div>
+
+			<div class="content2column width1000">
+
+				<div>
+
+					<div class="sptlght-box-400"><p>Are the names of the current navigational links on the live site understandable?</p></div>
+
+					<div class="sptlght-box-400"><p>Do the navigation labels accurately convey content?</p></div>
+
+					<div class="sptlght-box-400"><p>Is the content organized in a user-centered manner? In other words, how easily can our users navigate the website — does the IA match our users’ mental models?</p></div>
+
+				</div>
+
+				<div class="crd-srt-rght">
+					<img src="images/dfsa/dfsa-card-sort-reults.gif" alt="card sort results">
+				</div>
+			</div>
+
+			<div class="basic-paragraph">
+
+				<p><strong>The card sort data showed users organizing the IA much differently than it was on the live site.</strong> These findings in conjunction with the previous research (usability tests and generative interviews) supported our assumption that the website’s current IA was not matching our users’ mental models, and was actually the primary cause of our users’ frustrations.</p>
+
+			</div>
+
+			<h2 class="section-title">Empathize</h2>
+
+			<div class="basic-container">
+
+				<h3>Analysis & Synthesis</h3>
+
+				<p>After research was wrapped, I reviewed and analyzed the qualitative feedback and quantitative data, using spreadsheets, affinity maps, and empathy maps to form an aggregate of distinct themes that arose from the compiled research.</p>
+
+				<h5 class="f-blu" style="padding-bottom: 16px;">Affinity Mapping on Miro</h5>
+
+				<img src="images/dfsa/affinity-map.png" alt="affinity maps">
+				<img src="images/dfsa/affinity-maps.png" alt="affinity maps">
+
+			</div>
+
+			<div class="basic-paragraph">
+
+				<p>To synthesize, my team and I constructed various artifacts including 4 user personas and 4 user journey maps, which we later presented to the stakeholders. The research artifacts helped the stakeholders (who, notably, are already altruistic, wonderful people) gain additional empathy for our users. </p>
+
+			</div>
+
+			<div class="img80width">
+				<img src="images/dfsa/journeymap.png" alt="User journey map">
+			</div>
+
+			<h2 class="section-title">Ideation</h2>
+
+			<div class="img-below-container">
+
+				<h3>Collaborative Workshop</h3>
+
+				<p>We were ready to begin ideating! My team and I proposed a collaborative ideation workshop with our stakeholders. We wanted to keep them integrated and informed in as much of the design life cycle as possible to avoid any miscommunication and stay within our timeline without any hiccups.</p>
+
+			</div>
+
+			<div class="img80width">
+
+				<img src="images/dfsa/projplan.png" alt="COVID-19 project plan" id="covid-proj-plan">
+			</div>
+
+			<div class="basic-paragraph">
+
+				<p>COVID-19 made an appearance, causing Dress for Success to temporarily close their doors. With the entire world being put on pause, <strong>our ideation dreams were the last thing on our stakeholder’s minds.</strong></p>
+
+				<p>Our team needed to adapt, adjust our workflow and the distribution of tasks, refashion the project plan, and ideate new ways to ideate remotely.</p>
+
+				<h4 class="f-blu" style="padding-bottom: 16px;">Solution: Remote Ideation</h4>
+
+				<p>Instead of abandoning our ideation and design sprints completely, <strong>we pivoted to remote workshops by using a combination of Figma and frequent remote meetings.</strong></p>
+
+				<p>These exercises formed a great foundation to move into feature ideation and prioritization. We were able to conduct a number of ideation exercises remotely (crazy 8’s, iterative sketching) and bounce each designer’s ideas openly and efficiently. This type of feedback session would become the basis for all of our design sessions moving forward.</p>
+
+			</div>
+
+			<div class="two-img-grid">
+				<img src="images/dfsa/remote.png" alt="remote collaboration">
+				<img src="images/dfsa/remotewrk.png" alt="remote ideation">
+			</div>
+
+			<h2 class="section-title">Design</h2>
+
+			<div class="basic-container">
+
+				<h3>The Prototype + Testing</h3>
+
+				<p>Through close collaboration with my team, I was able to accurately communicate subtle but necessary interactions I wanted to design. I was also able to fine-tune the complexity of the navigation and eliminate extraneous features for the website.</p>
+
+				<p>To validate our research and design, we recruited candidates from our target pool for user testing. Once again due to the pandemic, we conducted 6 remote 1:1 usability testing by sharing our screen and maintaining mouse control over our Figma prototype. We prompted the users with task scenarios and a “think out loud” approach.</p>
+			</div>
+
+			<div id="figma">
+
+				<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FJdt1MdRsIhOZvwVVY1iLHn%2Fliv-copy-dfsa%3Fnode-id%3D2%253A1968%26scaling%3Dscale-down-width%26page-id%3D0%253A1" allowfullscreen></iframe>
+			</div>
+
+			<div class="basic-container">
+
+				<h3>Impact</h3>
+
+				<p>Through conducting several usability tests on the final mockups, I compared the findings to the original designs and determined there was a:</p>
+			</div>
+
+			<div class="sptlght-3-grid">
+
+				<div class="sptlght-box-200"><p>70% increase in task-success rates</p></div>
+
+				<div class="sptlght-box-200"><p>75% increase in user satisfaction (based on the Likert Scale)</p></div>
+
+				<div class="sptlght-box-200"><p>20% decrease in drop-off rates (for volunteer & client sign-up)</p></div>
+			</div>
+
+			<div class="basic-container">
+
+				<h3>Learnings...</h3>
+
+				<p>Interviewing and testing with a variety of Dress for Success users revealed they’re all clearly passionate about the non-profit, however, I also found the majority of our clients were not necessarily technologically savvy. This meant I had to design the user flows as intuitively and efficiently as possible based on the user feedback. Without having conducted the generative research in the beginning, these insights would have stayed invisible. The interviews and card sort testing gave the team raw data displaying our user needs and frustrations, allowing my team and stakeholders to build empathy with the multiple user groups. </p>
+
+				<p>Overall, I was able to take complex design challenges, with countless constraints, and flex my communication skills to break each down into actionable solutions. With the combined efforts of our UX team and the stakeholders working so closely with each other, this project was a learning experience in acknowledging constraints yet still finding a way to be flexible and design a product with an improved user experience (even in a pandemic).</p>
+
+			</div>
+
+			<div class="btns-half">
+				<div class="rght-btn">
+					<a href="abp.html">
+					<p>Next</p>
+					<h4>Austin Bouldering Project</h4>
+					</a>
+				</div>
+
+				<div class="lft-btn"><a href="dfsa.html">
+					<p>Prev</p>
+					<h4>Dress for Success</h4>
+					</a>
+				</div>
+			</div>
+
+
+		</main>
+
+		<footer>
+
+			<div class="centered-foot-grid">
+				
+				<div class="icon-footer">
+					<div class="icon">
+						<a href="index.html"><img alt="home icon" src="images/home-icon.png"></a>
+					</div>
+					<div class="icon">
+						<a href="contact.html"><img id="mail-footer" alt="mail icon" src="images/mail-icon.png"></a>
+					</div>
+					<div class="icon">
+						<a target="_blank" href="https://www.twitter.com/livtorczon"><img id="twitter-footer" alt="twitter icon" src="images/twitter-icon.png"></a>
+					</div>
+					<div class="icon">
+						<a target="_blank" href="https://www.linkedin.com/in/livtorczon"><img id="linkedin-footer" alt="LinkedIn icon" src="images/linkedin-icon.png"></a>
+					</div>
+				</div>
+				<p>© 2021 Liv Torczon</p>
+
+			</div>
+
+		</footer>
+		<script>
+			function getresult(url) {
+				$.ajax({
+				url: url,
+				type: "GET",
+				data:  {rowcount:$("#rowcount").val()},
+				beforeSend: function(){
+				$('#loader-icon').show();
+				},
+				complete: function(){
+				$('#loader-icon').hide();
+				},
+				success: function(data){
+				$("#faq-result").append(data);
+				},
+				error: function(){} 	        
+				});
+				}
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8">
+		<!---------
+			FINAL PROJECT DTC 477 FALL 2021
+			NAME: Liv Torczon
+			JS on this page: Progress bar, header shrink, and drop-shadow on nav.
+		----------->
+		<title>Streamlining Member Services — Liv Torczon</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="icon" type="image" href="images/rocket-favicon.png" sizes="16x16">
+
+		<link rel="stylesheet" href="https://use.typekit.net/mub6ptb.css">
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/main.css">
+
+		<!-- My Javascript File -->
+		<!-- If JS is used on this page, there will be a comment with the source and link -->
+		<script src="js/myScript.js"></script>
+	</head>
+
+	<!--
+		JAVASCRIPT BELOW
+
+		ONLOAD ALERT MESSAGE APPEARS
+
+		DESCRIPTION: Each time a user visits this page, an alert message appears letting the user (Stamper) know what javascript has been added.
+
+		SOURCE: https://www.w3schools.com/js/tryit.asp?filename=tryjs_events_body_onload
+	-->
+	<body onload="abpAlert()">
+
+		<!-- 
+			JS SCROLL INDICATOR BELOW
+
+			DESCRIPTION: This is a sticky scrollbar placed beneath my sticky nav; the scroll bar lets the user know how far down a page they've gone 
+
+			SOURCE: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_indicator 
+		-->
+		<div class="scroll-indicator">
+		  <div class="progress-container">
+		    <div class="progress-bar" id="myBar"></div>
+		  </div>
+		</div>
+
+		<!-- 
+			JAVASCRIPT BELOW
+			SHRINK HEADER SCROLL && BOXSHADOW ON NAV
+
+			DESCRIPTION: There is a boxshadow that appears on the navigation when the user scrolls. Additionally, the "logo" (my name) shrinks when the user scrolls down.
+
+			SHRINK SOURCE: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_shrink_header_scroll
+
+			BOXSHADOW SOURCE: https://www.w3schools.com/jsref/prop_style_boxshadow.asp
+		-->
+		<header id="header">
+
+			<div class="navigation-grid" id="navShadow">
+				<!-- logo wrapper -->
+				<div class="nav-title-wrapper">
+
+					<a class="site-icon" href="index.html"><img src="images/rocket-favicon.png" alt="site logo"></a>
+
+					<!-- this shrinks on scroll -->
+					<a class="site-title" id="myName" href="index.html">Victoria Liv Torczon</a>
+
+				</div>
+				<!-- nav links wrapper -->
+				<div class="nav-links-wrapper">
+
+					<a class="nav-links" href="index.html">Work</a>
+
+					<a class="nav-links" href="about.html">About</a>
+
+					<a class="nav-links" href="contact.html">Contact</a>
+				</div>
+			</div>
+
+		</header>
+
+		<main class="main-margin-top">
+
+			<h1 class="study-title">Streamlining Member Services</h1>
+
+			<div>
+				<img src="images/abp/abpCover.png" alt="image of a rock climbing gym's website">
+			</div>
+
+			<div class="basic-container">
+
+				<h3>The Challenge</h3>
+				<p>Austin Bouldering Project is an all-in-one co-working space, bouldering gym, yoga studio, and fitness center in Austin, Texas. Members of ABP are able to edit and modify their accounts using the ABP website, however, <strong>prior to this project, members were experiencing friction when trying to access and edit their accounts on the website.</strong></p>
+
+				<p>A button labeled ‘My Account’ was placed in a side panel (pictured below), which was difficult to find, lacking any affordances as to who the button was for and where the button would take the user after clicking. So, I got high-level support and <strong>set out on a journey to redesign the online membership feature using a user-centered design process.</strong></p>
+			</div>
+
+			<div class="full-spread-img" style="padding-left: 42px;">
+				<img alt="feature redesign photo" src="images/abp/feature-redesign.png">
+			</div>
+
+			<div class="process bg-drk-blu">
+				<h2 class="f-lght-blu">Process</h2>
+			</div>
+			
+
+			<div class="flx-spc-arnd">
+
+				<div class="lft">
+					
+					<img src="images/abp/Joey_Usability_test.jpg" alt="user testing the feature">
+				</div>
+
+				<div class="rght">
+					<h3>Testing The Feature</h3>
+					<p class="challenge">Usability Testing</p>
+
+					<p>To test the ‘My Account’ button, I began by conducting usability tests with current and new members, prescribing various tasks to measure task-success rates. I also chose to utilize the Litger scale as a way to measure user satisfaction after completion of a task. This entailed asking each participant to rate the completed task on a scale from 1-5, with 1 being very easy and 5 being very difficult.</p>
+
+					<p><strong>In total, I facilitated 8 usability tests.</strong> As hypothesized, even with the ‘My Account’ button on every single page of the website, it went unnoticed by every user.</p>
+
+					<p>The usability tests allowed me to see how users find information, which navigation components are utilized, which ones go unnoticed, and which ones are avoided. Utilizing the Litger Scale also provided me with additional qualitative data into how users felt about the tasks overall.</p>
+				</div>
+
+			</div>
+
+			<div class="two-one-grid">
+
+				<h4 class="two-one-title f-drk-grn">Key Usability Test Results</h4>
+				
+				<div class="grn-sptlght-box-400">
+					<h3>✍️</h3>
+
+					<p>20% out of the 5 prescribed tasks were successfully completed.</p>
+				</div>
+				<div class="grn-sptlght-box-400">
+					<h3>✍️</h3>
+
+					<p>20% of users were able to find the ‘My Account’ button, however, each user took longer than 30 seconds and needed more than 3 clicks to find it.</p>
+				</div>
+				<div id="insight-bg">
+					<h3>🧐</h3> 
+					<p>To my surprise, I discovered the task-success rate did not correlate with the user’s Litger rating. Several participants rated a task with a 1 or 2 (very easy) even though they were unable to complete the task and/or verbally grieved about a component on the interface.</p>
+				</div>
+
+			</div>
+
+			<!-- IA -->
+
+			<h3 style="text-align: center; padding: 2rem 0 0 0;"> Information Architecture</h3>
+
+			<p class="challenge" style="text-align: center;">Open Card Sort</p>
+
+			<div class="content2column width1000" style="padding-top: 2rem;">
+
+				<div class="cntn-txt pddng-mdm">
+					<p><strong>Next, I tested the information architecture (IA) with an open card sort.</strong> I wanted to understand and measure how the user would expect to see the navigation organized on the Austin Bouldering Project website.</p> 
+				</div>
+
+				<div class="pddng-mdm">
+					<img src="images/abp/card-sort-data.png" alt="card sort date">
+				</div>
+
+			</div>
+
+			<div class="content2column width1000 pddng-lrg" style="padding-bottom: 5rem;">
+				<div class="pddng-mdm">
+					<img src="images/abp/demo_card_sort.gif" alt="image of an open card sort">
+				</div>
+				<div>
+					<p class="cntn-txt pddng-mdm"><strong>In an open card sort, participants sort cards with labels coming directly from the website’s navigation into categories that make sense to them</strong> and then title each category themselves (pictured below on the left). In total, I conducted 7 card sorts while also conducting casual interviews with each of my participants.</p>
+				</div>
+			</div>
+
+			<div class="key-results  bg-prpl">
+
+				<div class="results-title">
+					<h4 class="f-drk-prpl">Insights & Findings:</h4>
+				</div>
+
+				<div class="results">
+
+					<div class="insight">
+
+						<h3>🧐</h3>
+						<p class="f-drk-prpl">The navigation labels on the site, for the most part, were understandable to recurring members, however, some labels suprised us and weren’t intuitive at all. For instance ➡️</p>
+					</div>
+
+					<div class="finding bg-wht">
+						<h3>✍️</h3>
+						<p class="f-drk-prpl">100% of participants believed "Team" represented the staff of ABP, rather than a kid’s competitive climbing team.</p>
+					</div>
+
+					<div class="finding bg-wht">
+						<h3>✍️</h3>
+						<p class="f-drk-prpl">60% said "My Account" would only allow users to make payments on their membership (which is false).</p>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="img-below-container">
+				<h3 style="padding-top: 4rem;">Competitive Analysis</h3>
+
+				<p>Next, I performed a light competitive analysis to discover any opportunities we might have to create a more intuitive and delightful user experience. Instead of just creating a checklist of comparative features, I assessed our competitors (in co-working & fitness center spaces) based on common user scenarios: <strong>Search, Edit Account, and Submit Change.</strong></p>
+
+			</div>
+
+			<div class="img80width pddng-sml">
+				<img src="images/abp/competitive-analysis.png" alt="image of competitive analysis between ABP and other gyms">
+			</div>
+
+			<div class="basic-container">
+				<p>It turned out that we actually had a lot of the core features our competition had. However, there was still a <strong>massive opportunity to be had in the design and development of those items and functionalities.</strong> Armed with inspiration from the competitive analysis, I embarked on some high-level brainstorming of core issues in the flow.</p>
+
+			</div>
+
+			<div class="key-results bg-grn">
+
+				<div class="results-title">
+					<h4 class="f-drk-grn">New Areas of Focus:</h4>
+				</div>
+
+				<div class="two-results">
+
+					<div class="finding bg-drk-grn">
+						<h3>1️⃣</h3>
+						<p class="f-grn">Explore an experience that offers multiple ways of discovering the feature (deep browsing and shallow).</p>
+					</div>
+
+					<div class="finding bg-drk-grn">
+						<h3>2️⃣</h3>
+						<p class="f-grn">Explore a system that offers consistency. It can flex for more complicated items (i.e. being a fitness center and a co-working space was tricky to find comparisons).</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="img-below-container">
+
+				<h3 style="padding-top: 2rem;">Ideation</h3>
+
+				<p>After presenting my research findings from the usability tests, card sort, and competitive analysis, I convinced my stakeholders to perform a couple round of crazy 8's with my team.</p><br>
+
+				<p>We iterated on our best ideas by sketching them out on white-boards. Because of this small ideation session, <strong>I was able to quickly develop the first user flows without touching a single pixle.</strong></p>
+			</div>
+
+			<div class="img70width pddng-sml">
+
+				<img src="images/abp/wireframe-session.jpg" alt="wireframe session">
+
+			</div>
+
+			<div class="basic-container">
+				<div>
+
+					<h3>Wireframing & Testing</h3>
+
+					<p>After ideation, I began to build my first digital prototype. I conducted multiple, small usability tests to see how my designs performed with users.</p>
+				</div>
+
+				<div>
+					<h5 class="f-blu">My focus was on:</h5>
+
+					<p><strong>Browsing:</strong> updates to the landing page and navigation</p>
+
+					<p><strong>The "My Account" button:</strong> rework the visual design and include sign-posts to increase learnability and memorability</p>
+				</div>
+			</div>
+
+			<div class="img80width">
+
+				<img src="images/abp/iatesting.png" alt="Card sort testing">
+
+			</div>
+
+			<div class="basic-container">
+
+				<h3>Detailed Design</h3>
+
+				<p>My usability tests prompted me to nix the ‘My Account’ button and remove the sticky side panel altogether. With the card-sort data, I revised some of the navigation titles and changed the hierarchy based on business goals.</p>
+
+			</div>
+
+			<img src="images/abp/abpbeforeandafter.png" alt="before and after design changes on the website">
+
+			<div class="sptlght-box-700-grn" style="margin-bottom: 9rem;">
+				<h3 class="f-drk-grn">Impact</h3>
+				
+				<p>Comparing the task-success rates from the original design to my designs, the results showed an <strong>increase of 80% in the discoverability of the ‘My Account’ button, with a 15 second and 2-click target goal.</strong></p>
+			</div>
+
+			<h2 class="section-title">The Wrap Up</h2>
+
+			<div class="basic-container">
+				<h3>Learnings & Reflections...</h3>
+				<p>In testing, I repeatedly received feedback from participants that they were trying to follow what they had seen on other websites, which goes to show <strong>mental models are formed through frequent use of a system</strong> and the understanding of how it works. Additionally, my user-centered design process helped the stakeholders understand the importance of user research. I was able to demonstrate the power of small design tweaks, and how drastically they change a digital experience.</p>
+
+				<img src="images/abp/abp.jpeg" alt="image of a rock climbing gym">
+			</div>
+
+			<div class="btns-half">
+				<div class="rght-btn">
+					<a href="dfsa.html">
+					<p>Next</p>
+					<h4>Dress for Success</h4>
+					</a>
+				</div>
+
+				<div class="lft-btn"><a href="abp.html">
+					<p>Prev</p>
+					<h4>Austin Bouldering Project</h4>
+					</a>
+				</div>
+			</div>
+
+		</main>
+
+		<footer>
+
+			<div class="centered-foot-grid">
+				
+				<div class="centered-foot-grid">
+				
+				<div class="icon-footer">
+					<div class="icon">
+						<a href="index.html"><img alt="home icon" src="images/home-icon.png"></a>
+					</div>
+					<div class="icon">
+						<a href="contact.html"><img id="mail-footer" alt="mail icon" src="images/mail-icon.png"></a>
+					</div>
+					<div class="icon">
+						<a target="_blank" href="https://www.twitter.com/livtorczon"><img id="twitter-footer" alt="twitter icon" src="images/twitter-icon.png"></a>
+					</div>
+					<div class="icon">
+						<a target="_blank" href="https://www.linkedin.com/in/livtorczon"><img id="linkedin-footer" alt="LinkedIn icon" src="images/linkedin-icon.png"></a>
+					</div>
+				</div>
+				<p>© 2021 Liv Torczon</p>
+
+			</div>
+
+		</footer>
+
+	</body>
+</html>

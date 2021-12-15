@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8">
+
+		<!---------
+			FINAL PROJECT DTC 477 FALL 2021
+			NAME: Liv Torczon
+			jQuery & Javascript are on this page.
+		----------->
+
+		<title>Contact — Liv Torczon</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="icon" type="image" href="images/rocket-favicon.png" sizes="16x16">
+
+		<link rel="stylesheet" href="https://use.typekit.net/mub6ptb.css">
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/main.css">
+
+		<!-- My Javascript File -->
+		<!-- If JS is used on this page, there will be a comment with the source and link above the element -->
+		<script src="js/myScript.js"></script>
+
+		<!-- only page with jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+		<script>
+
+		// fade in, fade out
+		$(document).ready(function(){
+		  $("#birthPlace").click(function(){
+		    $("#homeTown").toggle();
+		  });
+		});
+
+		// fade in, fade out
+		$(document).ready(function(){
+		  $("#uxBook").click(function(){
+		    $("#books").toggle();
+		  });
+		});
+
+		// fade in, fade out
+		$(document).ready(function(){
+		  $("#hobby").click(function(){
+		    $("#hobbies").toggle();
+		  });
+		});
+		</script>
+		
+	</head>
+
+	<!--
+		JAVASCRIPT BELOW
+
+		ONLOAD ALERT MESSAGE APPEARS
+
+		DESCRIPTION: Each time a user visits this page, an alert message appears letting the user (Stamper) know what javascript has been added.
+
+		SOURCE: https://www.w3schools.com/js/tryit.asp?filename=tryjs_events_body_onload
+	-->
+	<body onload="contactAlert()">
+
+		<header>
+
+			<div class="navigation-grid">
+
+				<div class="nav-title-wrapper">
+
+					<a class="site-icon" href="index.html"><img src="images/rocket-favicon.png" alt="site logo"></a>
+
+					<a class="site-title" href="index.html">Victoria Liv Torczon</a>
+
+				</div>
+
+				<div class="nav-links-wrapper">
+
+					<a class="nav-links" href="index.html">Work</a>
+
+					<a class="nav-links" href="about.html">About</a>
+
+					<a class="nav-links" href="contact.html">Contact</a>
+				</div>
+			</div>
+
+		</header>
+
+		<main>
+			<section class="contact">
+
+				<div class="contact_text">
+
+			    	<h1>Contact me.</h1>
+
+				    	<p>If you have any questions or require access to a locked case study, please contact me via email or send me a message using the contact form.</p>
+
+						<p>Email: <a href="mailto:livtorczon@gmail.com">livtorczon@gmail.com</a></p>
+				</div>
+
+				<div class="form-container">
+
+					<form action="" method="">
+
+						<label for="your-name">Your Name</label>
+						<input type="text" name="your-name" placeholder="" required >
+
+						<label for="your-name">Your Email</label>
+						<input type="email" name="_replyto"  required >
+
+
+						<label for="your-name">Subject</label>
+						<input type="text" id="your-name" name="your-name" placeholder="" required >
+
+
+						<label for="comment">Your Message</label>
+						<textarea id="comment" name="comment" placeholder="" required ></textarea>
+
+						<input type="submit" value="Submit" onsubmit="confirmSubmission()">
+
+					</form>
+				</div>
+			</section>
+
+			<!-- 
+				JQUERY BELOW
+
+				REVEAL / HIDE
+
+				DESCRIPTION: Made up "frequently asked questions" for myself. The <a> link has an id that is called in the jquery at the top of this page in the head.
+
+				REVEAL/HIDE SOURCE: https://www.tutorialrepublic.com/jquery-tutorial/jquery-show-and-hide-effects.php
+			-->
+			<section class="faq">
+
+				<div class="faq_title">
+			    	<h3>Frequently Asked Questions</h3>
+				</div>
+
+				<div class="faq_questions">
+
+					<div class="qstn-container">
+						<!-- first question -->
+						<a class="question" id="birthPlace">Where is Liv from?</a>
+						<div id="homeTown">
+							<p>Austin Texas</p>
+						</div>
+					</div>
+
+					<div class="qstn-container">
+						<!-- second question -->
+						<a class="question" id="uxBook">Favorite books for User Experience?</a>
+						<div id="books">
+							<p><a href="https://www.thesprintbook.com/"target="_blank">Sprint</a> by Jake Knapp</p>
+							<p><a href="https://abookapart.com/products/just-enough-research" target="_blank">Just Enough Research</a> by Erika Hall</p>
+							<p><a href="https://portigal.com/Books/interviewing-users/" target="_blank">Interviewing Users</a> by Steve Portigal</p>
+						</div>
+					</div>
+
+					<div class="qstn-container">
+						<!-- third question -->
+						<a class="question" id="hobby">Any other hobbies?</a>
+						<div id="hobbies">
+								<p>Climbing, Running, Reading, Traveling!</p>
+						</div>
+					</div>
+
+				</div>
+			</section>
+	    	
+	    </main>
+
+
+		<footer>
+
+			<div class="centered-foot-grid">
+				
+				<div class="icon-footer">
+					<div class="icon">
+						<a href="index.html"><img alt="home icon" src="images/home-icon.png"></a>
+					</div>
+					<div class="icon">
+						<a href="contact.html"><img id="mail-footer" alt="mail icon" src="images/mail-icon.png"></a>
+					</div>
+					<div class="icon">
+						<a target="_blank" href="https://www.twitter.com/livtorczon"><img id="twitter-footer" alt="twitter icon" src="images/twitter-icon.png"></a>
+					</div>
+					<div class="icon">
+						<a target="_blank" href="https://www.linkedin.com/in/livtorczon"><img id="linkedin-footer" alt="LinkedIn icon" src="images/linkedin-icon.png"></a>
+					</div>
+				</div>
+				<p>© 2021 Liv Torczon</p>
+
+			</div>
+
+		</footer>
+
+	</body>
+</html>
